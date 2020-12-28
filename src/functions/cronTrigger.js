@@ -87,7 +87,7 @@ export async function processCronTrigger(event) {
       SECRET_TELEGRAM_CHAT_ID !== 'default-gh-action-secret'
     ) {
       console.log("Send telegram msg")
-      event.waitUntil(notifyTelegram(monitor, monitorOperational))
+      event.waitUntil(notifyTelegram(monitor, monitorOperational).then(r => r.json()).then(console.log))
     } else {
       console.log("Telegram not set up properly, omitting")
       console.log(SECRET_TELEGRAM_API_TOKEN.substring(0,4))
