@@ -2,7 +2,7 @@ settings:
   title: 'Status Page'
   url: 'https://status-page.eidam.dev' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
-  daysInHistogram: 90 # number of days you want to display in histogram
+  daysInHistogram: 60 # number of days you want to display in histogram
   collectResponseTimes: false # experimental feature, enable only for <5 monitors or on paid plans
 
   allmonitorsOperational: 'All Systems Operational'
@@ -22,16 +22,27 @@ monitors:
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+    
+  - id: mikrus
+    name: niedzwiedzinski.cyou
+    url: 'http://niedzwiedzinski.cyou'
     method: GET
     expectStatus: 200
-
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+    
+  - id: ipv4-tunnel
+    name: 4.niedzwiedzinski.cyou
+    url: 'https://4.niedzwiedzinski.cyou'
+    method: GET
+    expectStatus: 200
+    
+  - id: matus
+    name: matus
+    url: 'https://jakubmatusewicz.art'
+    method: GET
+    expectStatus: 200
+    
+  - id: puszcza
+    name: puszcza
+    url: 'https://puszcza.netlify.app'
     method: GET
     expectStatus: 200
