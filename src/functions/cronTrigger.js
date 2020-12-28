@@ -87,6 +87,8 @@ export async function processCronTrigger(event) {
     ) {
       console.log("Send telegram msg")
       event.waitUntil(notifyTelegram(monitor, monitorOperational))
+    } else {
+      console.log("Telegram not set up properly, omitting")
     }
 
     // make sure checkDay exists in checks in cases when needed
