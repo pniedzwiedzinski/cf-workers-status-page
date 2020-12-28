@@ -70,6 +70,8 @@ export async function notifyTelegram(monitor, operational) {
   ${operational ? '✅' : '❌'} \`${monitor.method ? monitor.method : 'GET'} ${
     monitor.url
   }\` \\- 👀 [Status Page](${config.settings.url})`
+  
+  console.log(`Sending ${text}`)
 
   const payload = new FormData()
   payload.append('chat_id', SECRET_TELEGRAM_CHAT_ID)
