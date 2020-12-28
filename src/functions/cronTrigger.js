@@ -90,6 +90,8 @@ export async function processCronTrigger(event) {
       event.waitUntil(notifyTelegram(monitor, monitorOperational))
     } else {
       console.log("Telegram not set up properly, omitting")
+      console.log(SECRET_TELEGRAM_API_TOKEN.substring(0,4))
+      console.log(SECRET_TELEGRAM_CHAT_ID.substring(0,4))
     }
 
     // Send Discord message on monitor change
