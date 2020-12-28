@@ -17,3 +17,7 @@ entry-point = "./"
 #kv-namespaces = [{binding="KV_STATUS_PAGE", id="xxxx", preview_id=""}]
 #zone_id="xxx"
 #route="xxx"
+
+[env.www]
+zone_id = "hidden"
+route = "status.niedzwiedzinski.cyou/*"
