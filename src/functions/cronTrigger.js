@@ -88,6 +88,8 @@ export async function processCronTrigger(event) {
     ) {
       console.log("Send telegram msg")
       event.waitUntil(notifyTelegram(monitor, monitorOperational))
+    } else {
+      console.log("Telegram not set up properly, omitting")
     }
 
     // Send Discord message on monitor change
