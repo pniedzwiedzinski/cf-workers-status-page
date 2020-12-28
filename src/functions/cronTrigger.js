@@ -86,6 +86,7 @@ export async function processCronTrigger(event) {
       typeof SECRET_TELEGRAM_CHAT_ID !== 'undefined' &&
       SECRET_TELEGRAM_CHAT_ID !== 'default-gh-action-secret'
     ) {
+      console.log("Send telegram msg")
       event.waitUntil(notifyTelegram(monitor, monitorOperational))
     }
 
