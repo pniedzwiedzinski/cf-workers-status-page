@@ -38,3 +38,9 @@ monitors:
     url: 'https://puszcza.netlify.app'
     method: GET
     expectStatus: 200
+    
+  - id: pics
+    name: 'pics'
+    url: 'https://pics.niedzwiedzinski.cyou/mando'
+    method: GET
+    expectStatus: 200
