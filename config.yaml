@@ -41,6 +41,6 @@ monitors:
     
   - id: pics
     name: 'pics'
-    url: 'https://pics.niedzwiedzinski.cyou/mando'
+    url: 'https://pics.niedzwiedzinski.cyou/mando/'
     method: GET
     expectStatus: 200
