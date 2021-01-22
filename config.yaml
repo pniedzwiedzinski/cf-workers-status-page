@@ -44,3 +44,15 @@ monitors:
     url: 'https://pics.niedzwiedzinski.cyou/mando/'
     method: GET
     expectStatus: 200
+    
+  - id: low-puszcza-netlify
+    name: 'low-puszcza netlify'
+    url: 'https://low-puszcza.netlify.app/'
+    method: GET
+    expectStatus: 200
+    
+  - id: low-puszcza
+    name: 'low-puszcza Github Pages'
+    url: 'https://19pdh.github.io/low-puszcza/'
+    method: GET
+    expectStatus: 200
