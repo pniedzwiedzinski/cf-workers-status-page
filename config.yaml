@@ -56,3 +56,15 @@ monitors:
     url: 'https://19pdh.github.io/low-puszcza/'
     method: GET
     expectStatus: 200
+    
+  - id: srv1
+    name: 'srv1'
+    url: 'http://srv1.niedzwiedzinski.cyou'
+    method: GET
+    expectStatus: 200
+    
+  - id: cgit
+    name: 'cgit'
+    url: 'http://git.niedzwiedzinski.cyou'
+    method: GET
+    expectStatus: 200
