@@ -15,15 +15,9 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:    
-  - id: mikrus
+  - id: personal
     name: 'personal site'
     url: 'http://niedzwiedzinski.cyou'
-    method: GET
-    expectStatus: 200
-    
-  - id: ipv4-tunnel
-    name: 'IPv4 tunnel for personal site'
-    url: 'https://4.niedzwiedzinski.cyou'
     method: GET
     expectStatus: 200
     
@@ -45,18 +39,6 @@ monitors:
     method: GET
     expectStatus: 200
     
-  - id: low-puszcza-netlify
-    name: 'low-puszcza netlify'
-    url: 'https://low-puszcza.netlify.app/'
-    method: GET
-    expectStatus: 200
-    
-  - id: low-puszcza
-    name: 'low-puszcza Github Pages'
-    url: 'https://19pdh.github.io/low-puszcza/'
-    method: GET
-    expectStatus: 200
-    
   - id: srv1
     name: 'srv1'
     url: 'https://srv1.niedzwiedzinski.cyou'
@@ -66,5 +48,11 @@ monitors:
   - id: cgit
     name: 'cgit'
     url: 'https://git.niedzwiedzinski.cyou'
+    method: GET
+    expectStatus: 200
+
+  - id: cybercoach
+    name: 'Cyber Coach'
+    url: 'https://cybercoach.pl'
     method: GET
     expectStatus: 200
