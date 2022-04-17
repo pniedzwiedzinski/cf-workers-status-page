@@ -17,7 +17,7 @@ settings:
 monitors:    
   - id: personal
     name: 'personal site'
-    url: 'http://niedzwiedzinski.cyou'
+    url: 'https://niedzwiedzinski.cyou'
     method: GET
     expectStatus: 200
     
