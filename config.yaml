@@ -29,7 +29,7 @@ monitors:
     
   - id: puszcza
     name: '19pdh-puszcza'
-    url: 'https://puszcza.netlify.app'
+    url: 'https://puszcza.19pdh.pl'
     method: GET
     expectStatus: 200
     
