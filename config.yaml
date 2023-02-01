@@ -27,27 +27,18 @@ monitors:
     method: GET
     expectStatus: 200
     
+  - id: puszcza
+    name: '19pdh-puszcza'
+    url: 'https://puszcza.19pdh.pl'
+    method: GET
+    expectStatus: 200
+    
   - id: pics
     name: 'pics'
     url: 'https://pics.niedzwiedzinski.cyou/mando/'
     method: GET
     expectStatus: 200
     
-<<<<<<< HEAD
-  - id: cgit
-    name: 'cgit'
-    url: 'https://git.niedzwiedzinski.cyou'
-    method: GET
-    expectStatus: 200
-
-  - id: cybercoach
-    name: 'Cyber Coach'
-    url: 'https://cybercoach.pl'
-    method: GET
-    expectStatus: 200
-    
-=======
->>>>>>> 9c6c822 (Update config.yaml)
   - id: srv1
     name: 'srv1'
     url: 'https://srv1.niedzwiedzinski.cyou'
