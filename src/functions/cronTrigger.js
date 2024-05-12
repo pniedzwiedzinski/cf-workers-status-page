@@ -6,6 +6,7 @@ import {
   getCheckLocation,
   getKVMonitors,
   setKVMonitors,
+  notifyDiscord,
 } from './helpers'
 
 function getDate() {
@@ -93,6 +94,15 @@ export async function processCronTrigger(event) {
       console.log(SECRET_TELEGRAM_CHAT_ID.substring(0,4))
     }
 
+    // Send Discord message on monitor change
+    if (
+      monitorStatusChanged &&
+      typeof SECRET_DISCORD_WEBHOOK_URL !== 'undefined' &&
+      SECRET_DISCORD_WEBHOOK_URL !== 'default-gh-action-secret'
+    ) {
+      event.waitUntil(notifyDiscord(monitor, monitorOperational))
+    }
+
     // make sure checkDay exists in checks in cases when needed
     if (
       (config.settings.collectResponseTimes || !monitorOperational) &&
@@ -136,8 +146,8 @@ export async function processCronTrigger(event) {
       // Save allOperational to false
       monitorsState.lastUpdate.allOperational = false
 
-      // Increment failed checks, only on status change (maybe call it .incidents instead?)
-      if (monitorStatusChanged) {
+      // Increment failed checks on status change or first fail of the day (maybe call it .incidents instead?)
+      if (monitorStatusChanged || monitorsState.monitors[monitor.id].checks[checkDay].fails == 0) {
         monitorsState.monitors[monitor.id].checks[checkDay].fails++
       }
     }
