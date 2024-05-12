@@ -38,9 +38,3 @@ monitors:
     url: 'https://git.niedzwiedzinski.cyou'
     method: GET
     expectStatus: 200
-
-  - id: cybercoach
-    name: 'Cyber Coach'
-    url: 'https://cybercoach.pl'
-    method: GET
-    expectStatus: 200
