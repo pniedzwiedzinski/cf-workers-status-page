@@ -27,21 +27,9 @@ monitors:
     method: GET
     expectStatus: 200
     
-  - id: puszcza
-    name: '19pdh-puszcza'
-    url: 'https://puszcza.19pdh.pl'
-    method: GET
-    expectStatus: 200
-    
   - id: pics
     name: 'pics'
     url: 'https://pics.niedzwiedzinski.cyou/mando/'
-    method: GET
-    expectStatus: 200
-    
-  - id: srv1
-    name: 'srv1'
-    url: 'https://srv1.niedzwiedzinski.cyou'
     method: GET
     expectStatus: 200
     
