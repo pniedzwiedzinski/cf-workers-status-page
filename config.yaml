@@ -38,3 +38,9 @@ monitors:
     url: 'https://git.niedzwiedzinski.cyou'
     method: GET
     expectStatus: 200
+    
+  - id: ua-energy
+    name: 'energy-of-ukraine'
+    url: 'https://ua.niedzwiedzinski.cyou'
+    method: GET
+    expectStatus: 200
