@@ -44,3 +44,9 @@ monitors:
     url: 'https://ua.niedzwiedzinski.cyou'
     method: GET
     expectStatus: 200
+
+  - id: solar
+    name: 'solar pi'
+    url: 'https://solar.niedzwiedzinski.cyou'
+    method: GET
+    expectStatus: 200
