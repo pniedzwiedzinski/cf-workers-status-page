@@ -17,7 +17,7 @@ settings:
 monitors:    
   - id: personal
     name: 'personal site'
-    url: 'https://niedzwiedzinski.cyou'
+    url: 'https://niedzwiedzinski.pl'
     method: GET
     expectStatus: 200
     
@@ -29,7 +29,7 @@ monitors:
     
   - id: pics
     name: 'pics'
-    url: 'https://pics.niedzwiedzinski.cyou/mando/'
+    url: 'https://pics.niedzwiedzinski.pl/mando/'
     method: GET
     expectStatus: 200
     
@@ -41,12 +41,7 @@ monitors:
     
   - id: ua-energy
     name: 'energy-of-ukraine'
-    url: 'https://ua.niedzwiedzinski.cyou'
+    url: 'https://ua.niedzwiedzinski.pl'
     method: GET
     expectStatus: 200
 
-  - id: solar
-    name: 'solar pi'
-    url: 'https://solar.niedzwiedzinski.cyou'
-    method: GET
-    expectStatus: 200
